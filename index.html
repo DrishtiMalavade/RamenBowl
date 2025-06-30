@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramen Bowl</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Side: Buttons -->
+        <div class="options">
+            <h3>Bowl</h3>
+            <button onclick="changeLayer('bowl', 'assets/bowl2.png')">Bowl 2</button>
+
+            <h3>Broth</h3>
+            <button onclick="changeLayer('broth1', 'assets/broth.png')">Broth 1</button>
+            
+            <h3>Noodles</h3>
+            <button onclick="changeLayer('noodles1', 'assets/noodles.png')">Noodles 1</button>
+            <button onclick="changeLayer('noodles2', 'assets/noodles2.png')">Noodles 2</button>
+
+            <h3>Egg</h3>
+            <button onclick="changeLayer('egg1', 'assets/egg1.png')">Egg 1</button>
+            <button onclick="changeLayer('egg2', 'assets/egg2.png')">Egg 2</button>
+
+            <h3>Topping</h3>
+            <button onclick="changeLayer('topping1', 'assets/sprouts.png')">Bean Sprouts</button>
+            <button onclick="changeLayer('topping2', 'assets/bokchoy.png')">Bok Choi</button>
+
+            <h3>Meat</h3>
+            <button onclick="changeLayer('meat1', 'assets/meat1.png')">Shrimp</button>
+            <button onclick="changeLayer('meat2', 'assets/meat2.png')">Bacon</button>
+            <button onclick="changeLayer('meat3', 'assets/meat3.png')">Spam</button>
+
+            <input type="text" id="bowlName" placeholder="Enter your ramen name" />
+            <button class="download-button" onclick="downloadRamen()">Download Your Ramen!</button>
+
+        </div>
+
+        <!-- Right Side: Ramen Bowl Display -->
+        <div class="bowl-area">
+            <div class="bowl" id="bowl-container">
+                <img id="bowl-layer" class="layer" style="display: none;">
+
+                <!-- Broth Layers -->
+                <img id="broth1-layer" class="layer" style="display: none;">
+                
+                <!-- Noodles Layers -->
+                <img id="noodles1-layer" class="layer" style="display: none;">
+                <img id="noodles2-layer" class="layer" style="display: none;">
+
+                <!-- Egg Layers -->
+                <img id="egg1-layer" class="layer" style="display: none;">
+                <img id="egg2-layer" class="layer" style="display: none;">
+
+                <!-- Topping Layers -->
+                <img id="topping1-layer" class="layer" style="display: none;">
+                <img id="topping2-layer" class="layer" style="display: none;">
+
+                <!-- Meat Layers -->
+                <img id="meat1-layer" class="layer" style="display: none;">
+                <img id="meat2-layer" class="layer" style="display: none;">
+                <img id="meat3-layer" class="layer" style="display: none;">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
