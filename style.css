@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-
 }
 
 html, body {
@@ -12,47 +11,29 @@ html, body {
 
 .container {
     display: flex;
-    padding: 1.25rem; /* 20px */
+    padding: 1.25rem;
     background-color: #abd957;
 }
 
 .options {
     width: 30%;
-   
-    padding: 2rem 0 0 4rem;
-
-}
-.options button {
-    margin: 1rem; /* or whatever small spacing you like */
+    padding: 1rem 0 0 4rem;
 }
 
 
 .bowl-area {
-    width: 100%;
+    width: 70%; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* ⭐ NEW: Wrap only the bowl image layers in this for clean capture */
-#download-area {
-    width: 25rem; /* 400px */
-    height: 25rem; /* square */
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* make sure nothing extra is outside */
-    background-color: white; /* optional, looks clean in download */
-    border-radius: 1rem; /* optional, makes it cute */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* optional soft shadow */
-}
 
 .bowl {
-    background-color: #ffe9db; /* Highlight area */
+    background-color: #ffe9db;
     position: relative;
-    width: 25rem; /* 400px */
-    height: 25rem; /* 400px, square now */ /* ⭐ UPDATED */
+    width: 25rem;
+    height: 25rem;
 }
 
 .bowl img.layer {
@@ -63,89 +44,66 @@ html, body {
     height: 100%;
 }
 
-/* Bowl */
 #bowl-layer {
-    top: 1.7rem; /* ⭐ UPDATED */
+    top: 1.7rem;
     left: 1.7rem;
-    width: 21.875rem; /* 350px */
+    width: 21.875rem;
     height: auto;
 }
 
-/* Broth 1 */
 #broth1-layer {
-    top: 3rem; /* ⭐ UPDATED */
+    top: 3rem;
     left: 3.1rem;
     width: 19rem;
     height: auto;
 }
 
-/* Noodles 1 */
 #noodles1-layer {
-    top: 3rem; /* ⭐ UPDATED */
+    top: 3rem;
     left: 3rem;
     width: 19rem;
     height: auto;
 }
 
-/* Noodles 2 */
 #noodles2-layer {
-    top: 4rem; /* ⭐ UPDATED */
+    top: 4rem;
     left: 4rem;
     width: 16rem;
     height: auto;
 }
 
-/* Egg 1 */
 #egg1-layer {
-    top: 11rem; /* ⭐ UPDATED */
+    top: 11rem;
     left: 4rem;
     width: 9.375rem;
     height: auto;
 }
 
-/* Egg 2 */
 #egg2-layer {
-    top: 12rem; /* ⭐ UPDATED */
+    top: 12rem;
     left: 5rem;
     width: 8.75rem;
     height: auto;
 }
 
-/* Topping 1 */
 #topping1-layer {
-    top: 5rem; /* ⭐ UPDATED */
+    top: 5rem;
     left: 6rem;
     width: 9.375rem;
     height: auto;
 }
 
-/* Topping 2 */
 #topping2-layer {
-    top: 4rem; /* ⭐ UPDATED */
+    top: 4rem;
     left: 5.5rem;
     width: 9rem;
     height: auto;
 }
 
-/* Meat 1 */
-#meat1-layer {
-    top: 9rem; /* ⭐ UPDATED */
-    left: 12rem;
-    width: 9.375rem;
-    height: auto;
-}
-
-/* Meat 2 */
-#meat2-layer {
-    top: 9rem; /* ⭐ UPDATED */
-    left: 12rem;
-    width: 9.375rem;
-    height: auto;
-}
-
-/* Meat 3 */
+#meat1-layer,
+#meat2-layer,
 #meat3-layer {
-    top: 9rem; /* ⭐ UPDATED */
+    top: 9rem;
     left: 12rem;
     width: 9.375rem;
     height: auto;
@@ -157,12 +115,9 @@ button {
     border: none;
     cursor: pointer;
     font-weight: bold;
-    background-color: #ffcc00;
+    background: transparent;
 }
 
-button:hover {
-    background-color: #ff9900;
-}
 
 
 #bowlName {
@@ -184,3 +139,10 @@ button:hover {
 .download-button:hover {
     background-color: #ff9900;
 }
+
+.button-image {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
