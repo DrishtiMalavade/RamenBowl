@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ramen Bowl</title>
+    <link rel="icon" href="assets/ramen.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-
 </head>
 
 <body>
@@ -15,54 +15,71 @@
         <!-- Left Side: Buttons -->
         <div class="options">
             <h3>Bowl</h3>
-            <button onclick="changeLayer('bowl', 'assets/bowl2.png')">Bowl 2</button>
+            <button onclick="changeLayer('bowl', 'assets/bowl1.png')">
+                <img src="assets/bowlbtn1.png" alt="Bowl 1" class="button-image">
+            </button>
+            <button onclick="changeLayer('bowl', 'assets/bowl2.png')">
+                <img src="assets/bowlbtn2.png" alt="Bowl 2" class="button-image">
+            </button>
+            <button onclick="changeLayer('bowl', 'assets/bowl3.png')">
+                <img src="assets/bowlbtn3.png" alt="Bowl 3" class="button-image">
+            </button>
 
             <h3>Broth</h3>
-            <button onclick="changeLayer('broth1', 'assets/broth.png')">Broth 1</button>
-            
+            <button onclick="changeLayer('broth1', 'assets/broth.png')">
+                <img src="assets/brothbtn.png" alt="Broth" class="button-image">
+            </button>
+
             <h3>Noodles</h3>
-            <button onclick="changeLayer('noodles1', 'assets/noodles.png')">Noodles 1</button>
-            <button onclick="changeLayer('noodles2', 'assets/noodles2.png')">Noodles 2</button>
+            <button onclick="changeLayer('noodles1', 'assets/noodles.png')">
+                <img src="assets/noodlesbtn.png" alt="Noodles 1" class="button-image">
+            </button>
+            <button onclick="changeLayer('noodles2', 'assets/noodles2.png')">
+                <img src="assets/noodlesbtn.png" alt="Noodles 2" class="button-image">
+            </button>
 
             <h3>Egg</h3>
-            <button onclick="changeLayer('egg1', 'assets/egg1.png')">Egg 1</button>
-            <button onclick="changeLayer('egg2', 'assets/egg2.png')">Egg 2</button>
+            <button onclick="changeLayer('egg1', 'assets/egg1.png')">
+                <img src="assets/eggbtn1.png" alt="Egg 1" class="button-image">
+            </button>
+            <button onclick="changeLayer('egg2', 'assets/egg2.png')">
+                <img src="assets/eggbtn2.png" alt="Egg 2" class="button-image">
+            </button>
 
             <h3>Topping</h3>
-            <button onclick="changeLayer('topping1', 'assets/sprouts.png')">Bean Sprouts</button>
-            <button onclick="changeLayer('topping2', 'assets/bokchoy.png')">Bok Choi</button>
+            <button onclick="changeLayer('topping1', 'assets/sprouts.png')">
+                <img src="assets/sproutsbtn.png" alt="Bean Sprouts" class="button-image">
+            </button>
+            <button onclick="changeLayer('topping2', 'assets/bokchoy.png')">
+                <img src="assets/bokchoybtn.png" alt="Bok Choi" class="button-image">
+            </button>
 
             <h3>Meat</h3>
-            <button onclick="changeLayer('meat1', 'assets/meat1.png')">Shrimp</button>
-            <button onclick="changeLayer('meat2', 'assets/meat2.png')">Bacon</button>
-            <button onclick="changeLayer('meat3', 'assets/meat3.png')">Spam</button>
+            <button onclick="changeLayer('meat1', 'assets/meat1.png')">
+                <img src="assets/shrimpbtn.png" alt="Shrimp" class="button-image">
+            </button>
+            <button onclick="changeLayer('meat2', 'assets/meat2.png')">
+                <img src="assets/spambtn.png" alt="Bacon" class="button-image">
+            </button>
+            <button onclick="changeLayer('meat3', 'assets/meat3.png')">
+                <img src="assets/baconbtn.png" alt="Spam" class="button-image">
+            </button>
 
             <input type="text" id="bowlName" placeholder="Enter your ramen name" />
             <button class="download-button" onclick="downloadRamen()">Download Your Ramen!</button>
-
         </div>
 
         <!-- Right Side: Ramen Bowl Display -->
         <div class="bowl-area">
             <div class="bowl" id="bowl-container">
                 <img id="bowl-layer" class="layer" style="display: none;">
-
-                <!-- Broth Layers -->
                 <img id="broth1-layer" class="layer" style="display: none;">
-                
-                <!-- Noodles Layers -->
                 <img id="noodles1-layer" class="layer" style="display: none;">
                 <img id="noodles2-layer" class="layer" style="display: none;">
-
-                <!-- Egg Layers -->
                 <img id="egg1-layer" class="layer" style="display: none;">
                 <img id="egg2-layer" class="layer" style="display: none;">
-
-                <!-- Topping Layers -->
                 <img id="topping1-layer" class="layer" style="display: none;">
                 <img id="topping2-layer" class="layer" style="display: none;">
-
-                <!-- Meat Layers -->
                 <img id="meat1-layer" class="layer" style="display: none;">
                 <img id="meat2-layer" class="layer" style="display: none;">
                 <img id="meat3-layer" class="layer" style="display: none;">
