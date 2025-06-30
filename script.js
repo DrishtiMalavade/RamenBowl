@@ -17,8 +17,6 @@ function changeLayer(layerType, imagePath) {
     else if (layerType.startsWith('meat')) layerId = 'meat';
     else if (layerType.startsWith('topping')) layerId = 'topping';
 
-
-
     // For exclusive layers (broth, noodles, egg, meat)
     if (selectedLayers[layerId] === layerType) {
         // If clicked again, remove the image
@@ -38,10 +36,11 @@ function changeLayer(layerType, imagePath) {
     }
 }
 
+// Download the customized ramen bowl as an image
 function downloadRamen() {
     const bowlElement = document.querySelector('.bowl'); // Select the bowl area
     const bowlNameInput = document.getElementById('bowlName').value.trim(); // Get the custom name
-    const fileName = bowlNameInput !== '' ? bowlNameInput + '.png' : 'my_ramen_bowl.png'; // Default if empty
+    const fileName = bowlNameInput !== '' ? bowlNameInput + '.png' : 'my_ramen_bowl.png'; // Default name if input is empty
 
     html2canvas(bowlElement).then(canvas => {
         const link = document.createElement('a');
